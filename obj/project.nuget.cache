@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cx2AjSWJxYk=",
+  "dgSpecHash": "eENJnN0soHI=",
   "success": true,
   "projectFilePath": "C:\\Users\\heito\\Desktop\\Todo\\Todo.csproj",
   "expectedPackageFiles": [
@@ -21,9 +21,14 @@
     "C:\\Users\\heito\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.13\\microsoft.entityframeworkcore.analyzers.9.0.13.nupkg.sha512",
     "C:\\Users\\heito\\.nuget\\packages\\microsoft.entityframeworkcore.design\\9.0.13\\microsoft.entityframeworkcore.design.9.0.13.nupkg.sha512",
     "C:\\Users\\heito\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\9.0.13\\microsoft.entityframeworkcore.relational.9.0.13.nupkg.sha512",
+    "C:\\Users\\heito\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\9.0.13\\microsoft.entityframeworkcore.sqlite.9.0.13.nupkg.sha512",
+    "C:\\Users\\heito\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\9.0.13\\microsoft.entityframeworkcore.sqlite.core.9.0.13.nupkg.sha512",
     "C:\\Users\\heito\\.nuget\\packages\\microsoft.extensions.dependencymodel\\9.0.13\\microsoft.extensions.dependencymodel.9.0.13.nupkg.sha512",
     "C:\\Users\\heito\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
+    "C:\\Users\\heito\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.10\\sqlitepclraw.bundle_e_sqlite3.2.1.10.nupkg.sha512",
     "C:\\Users\\heito\\.nuget\\packages\\sqlitepclraw.core\\2.1.10\\sqlitepclraw.core.2.1.10.nupkg.sha512",
+    "C:\\Users\\heito\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.10\\sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\heito\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.10\\sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512",
     "C:\\Users\\heito\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
     "C:\\Users\\heito\\.nuget\\packages\\system.composition\\7.0.0\\system.composition.7.0.0.nupkg.sha512",
     "C:\\Users\\heito\\.nuget\\packages\\system.composition.attributedmodel\\7.0.0\\system.composition.attributedmodel.7.0.0.nupkg.sha512",
@@ -32,5 +37,18 @@
     "C:\\Users\\heito\\.nuget\\packages\\system.composition.runtime\\7.0.0\\system.composition.runtime.7.0.0.nupkg.sha512",
     "C:\\Users\\heito\\.nuget\\packages\\system.composition.typedparts\\7.0.0\\system.composition.typedparts.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'SQLitePCLRaw.lib.e_sqlite3' 2.1.10 has a known high severity vulnerability, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
+      "projectPath": "C:\\Users\\heito\\Desktop\\Todo\\Todo.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\heito\\Desktop\\Todo\\Todo.csproj",
+      "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }
