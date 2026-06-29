@@ -99,4 +99,28 @@ app.MapPost("/login", async ( AppDbContext db, LoginRequestDto request, IAuthSer
     
     
 });
+
+app.MapGet("/me", async (AppDbContext db, ClaimsPrincipal user) =>
+{
+    var userIdClaim = user.FindFirstValue(ClaimTypes.NameIdentifier);
+
+    if(string.IsNullOrWhiteSpace(userIdClaim) || !Guid.TryParse(userIdClaim, out var userId))
+        return Results.Unauthorized();
+
+
+
+    var profile = await db.Users.Where(u => u.Id == userId).Select(u => new UserResponseDto
+    {
+        Mail = u.Mail,
+        Name = u.Name,
+        Age = u.Age
+    }).FirstOrDefaultAsync();
+
+    if(profile is null)
+        return Results.NotFound();
+
+    
+    return Results.Ok(profile);
+});
+
 app.Run();

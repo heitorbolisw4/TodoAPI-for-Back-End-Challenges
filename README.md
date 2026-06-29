@@ -55,3 +55,23 @@ A `User` has many `Task`s (one-to-many).
 ```bash
 dotnet run
 ```
+
+
+
+Json format
+
+Register:
+{
+    "Name": "exemplo",
+    "Age": 2000,
+    "Mail": "exemplo@exemplo.com",
+    "Password": "123456"
+    
+}
+
+Login:
+{
+    "Mail": "exemplo@exemplo.com",
+    "Password": "123456"
+    
+}
