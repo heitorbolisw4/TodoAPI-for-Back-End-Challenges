@@ -73,4 +73,30 @@ app.MapPost("/register", (AppDbContext db, RegisterRequestDto request, IAuthServ
     return Results.Created();
 });
 
+app.MapPost("/login", async ( AppDbContext db, LoginRequestDto request, IAuthService service) =>
+{
+   if(string.IsNullOrWhiteSpace(request.Mail) || string.IsNullOrWhiteSpace(request.Password))
+        return Results.Unauthorized();
+
+    
+    // eu busco o user e verifico se é null
+    var user = await db.Users.FirstOrDefaultAsync(u => u.Mail == request.Mail);
+    if(user == null)
+        return Results.Unauthorized();
+
+    
+    // eu busco o password do user e verifico se hash salvo no banco é igual a request
+    string passw = user.PasswordHash;
+    bool passValid = service.PasswVerify(passw, request.Password);
+    if(!passValid)
+        return Results.Unauthorized();
+
+
+    // se a verificação der certo eu gero o token e retorno n
+    var token = service.GenerateToken(user);
+
+    return Results.Ok(new {token});
+    
+    
+});
 app.Run();
